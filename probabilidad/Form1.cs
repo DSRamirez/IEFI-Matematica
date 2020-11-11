@@ -44,7 +44,11 @@ namespace probabilidad
 
         private void btnN_Click(object sender, EventArgs e)
         {
-            
+
+            // VAR = DGV.ROW + VAR
+            // DGT.ROW = VAR
+            // J++
+            //I++
             foreach (DataGridViewRow row in dgw.Rows)
             {
                 total += Convert.ToDouble(row.Cells["fi"].Value);
@@ -54,7 +58,7 @@ namespace probabilidad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             foreach (DataGridViewRow row in dgw.Rows)
             {
                 total3 += Convert.ToDouble(row.Cells["Xixfi"].Value);
@@ -69,7 +73,7 @@ namespace probabilidad
 
         private void dgw_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgw.Columns[e.ColumnIndex].Name == "fi")
+            if (dgw.Columns[e.ColumnIndex].Name == "fi")
             {
                 C0 = double.Parse(dgw.Rows[e.RowIndex].Cells[0].Value.ToString());
                 C1 = double.Parse(dgw.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -77,7 +81,7 @@ namespace probabilidad
                 dgw.Rows[e.RowIndex].Cells[2].Value = XxF;
 
                 C02 = C0 * C0;
-                XxF2 = C02 * C1; 
+                XxF2 = C02 * C1;
                 dgw.Rows[e.RowIndex].Cells[4].Value = XxF2;
             }
         }
@@ -85,7 +89,7 @@ namespace probabilidad
         private void button2_Click(object sender, EventArgs e)
         {
             ///confirmar3
-            foreach(DataGridViewRow row in dgw.Rows)
+            foreach (DataGridViewRow row in dgw.Rows)
             {
                 total5 += Convert.ToDouble(row.Cells["xi2xfi"].Value);
                 txtcuadrado.Text = Convert.ToString(total5);
@@ -197,22 +201,24 @@ namespace probabilidad
         #endregion
         private void button3_Click(object sender, EventArgs e)
         {
+            double varianza2 = double.Parse(txtcuadrado.Text) / double.Parse(txtN.Text);
 
-            
-            var1 = (varianza / total) / 100;
-            var2 = (total3 / total) * (total3 / total);
-            resultadovarianza =var1 - var2;
-            txtvarianzaM.Text = Convert.ToString(resultadovarianza);
-
-
-
+            double potencia = double.Parse(txtproducto.Text) / double.Parse(txtN.Text);
+            potencia = potencia * potencia;
+            varianza2 = varianza2 - potencia;
+            txtvarianzaM.Text = varianza2.ToString();
+            //var1 = (varianza / total) / 100;
+            //var2 = (total3 / total) * (total3 / total);
+            //resultadovarianza =var1 - var2;
+            //txtvarianzaM.Text = Convert.ToString(resultadovarianza);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            var3 = Math.Sqrt(resultadovarianza);
-            txtTipica.Text = Convert.ToString(var3);
+            double desviacionT = double.Parse(txtvarianzaM.Text);
+            txtTipica.Text = (Math.Sqrt(desviacionT)).ToString();
+            //var3 = Math.Sqrt(resultadovarianza);
+            //txtTipica.Text = Convert.ToString(var3);
         }
 
 
@@ -230,6 +236,57 @@ namespace probabilidad
 
                 MessageBox.Show("ingrese un numero"); ;
             }
+
+        }
+
+        private void BtComenzar_Click(object sender, EventArgs e)
+        {
+            //    int t = Convert.ToInt32(CbVeces.SelectedItem);
+            //    int b = 1;
+            //    string[] caracruz = { "c", "x" };
+            //    Random generator = new Random();
+
+            //    double lanzamientos = 0;
+            //    double favorables = 0;
+
+            //    for (int i = 0; i < t; i++)
+            //    {
+            //        for (int j = 0; j < t ; j++)
+            //        {
+            //            int r = generator.Next(2);
+            //            if (r == b)
+            //            {
+            //                favorables++;
+            //            }
+            //        }
+            //    }
+
+            int cantveces = Convert.ToInt32(CbVeces.SelectedItem);
+            Double x = 0.0;
+            int c = 0;
+            int esca = 0;
+            int escr = 1;
+
+            Random ran = new Random();
+            while (esca <= cantveces)
+            {
+                x = ran.NextDouble();
+                if (x < 0.5)
+                {
+                    LblCruz.Text = LblCruz.Text + " CRUZ  ";
+                    escr = escr + 1;
+                }
+                else if (x > 0.5)
+                {
+                    lblCaras.Text = lblCaras.Text + " C  ";
+                    esca = esca + 1;
+                }
+            }
+
+            lblCaras.Text = esca.ToString();
+            LblCruz.Text = escr.ToString();
+            LblProbCara.Text = (esca / cantveces).ToString();
+            lblProbCruz.Text = (escr / cantveces).ToString();
 
         }
     }
