@@ -107,11 +107,10 @@ namespace probabilidad
         {
             Mediana();
             Media();
-            //Moda1();
             Modatxt.Text = ModaTest().ToString();
         }
 
-        
+        #region
         public void MetodoBurbuja()
         {
             int t;
@@ -195,6 +194,7 @@ namespace probabilidad
             return numero;
         }
 
+        #endregion
         private void button3_Click(object sender, EventArgs e)
         {
 
