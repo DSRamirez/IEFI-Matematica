@@ -215,29 +215,9 @@ namespace probabilidad
             txtTipica.Text = Convert.ToString(var3);
         }
 
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-
-            
-        //    var1 = (varianza / total) / 100;
-        //    var2 = (total3 / total) * (total3 / total);
-        //    resultadovarianza =var1 - var2;
-        //    txtvarianzaM.Text = Convert.ToString(resultadovarianza);
 
 
-
-        //}
-
-        //private void button4_Click(object sender, EventArgs e)
-        //{
-
-        //    var3 = Math.Sqrt(resultadovarianza);
-        //    txtTipica.Text = Convert.ToString(var3);
-        //}
-
-
-        // hacer tabla frecuencia absoluta acumulada para comparar percentil
-        private void btnPercentil_Click(object sender, EventArgs e)
+        private void btnPercentil_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -245,12 +225,11 @@ namespace probabilidad
                 percentil = double.Parse(txtPercentil.Text);
                 txtPercentilMuestra.Text = Convert.ToString((percentil * totalp) / 100);
             }
-            catch (Exception )
+            catch (Exception)
             {
 
-                MessageBox.Show("ingrese un numero" );   ;
+                MessageBox.Show("ingrese un numero"); ;
             }
-
 
         }
     }

@@ -18,3 +18,13 @@ C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.exe
 C:\Users\Administrador\Documents\GitHub\probalilidad-mate\probabilidad\obj\Debug\probabilidad.pdb
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\bin\Debug\probabilidad.exe.config
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\bin\Debug\probabilidad.exe
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\bin\Debug\probabilidad.pdb
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.csprojAssemblyReference.cache
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.form1.resources
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.Properties.Resources.resources
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.csproj.GenerateResource.cache
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.csproj.CoreCompileInputs.cache
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.exe
+C:\Users\MAXx\Source\Repos\IEFI-Matematica\probabilidad\obj\Debug\probabilidad.pdb
