@@ -155,35 +155,6 @@ namespace probabilidad
 
         }
 
-        ////public void Moda1()
-        ////{
-        ////    int conDesp = 0;
-        ////    int conAnte = 0;
-
-        ////    for (int i = 0; i < ListaNumeros.Items.Count; i++)
-        ////    {
-
-        ////        double mPrimero = Convert.ToDouble(ListaNumeros.Items[i]);
-
-        ////        for (int j = 0; j < ListaNumeros.Items.Count; j++)
-        ////        {
-        ////            double msegundo = Convert.ToDouble(ListaNumeros.Items[i]);
-        ////            if (mPrimero == msegundo)
-        ////            {
-        ////                conDesp++;
-        ////            }
-        ////        }
-        ////        if (conDesp != 1)
-        ////        {
-        ////            if (conAnte < conDesp)
-        ////            {
-        ////                conAnte = conDesp;
-        ////                Modatxt.Text = mPrimero.ToString();
-        ////            }
-        ////        }
-        ////    }
-        ////}
-
         public double ModaTest()
         {
             double numero = Convert.ToDouble(ListaNumeros.Items[0]);
